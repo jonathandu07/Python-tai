@@ -101,3 +101,44 @@ moyenne = (note_maths + note_anglais + note_physique) / 3
 # affichage de la nouvelle moyenne
 print("Après mise à jour, la nouvelle moyenne est des : ", moyenne)
 
+# Exercises les types de données en Python
+"""
+Enoncé :
+1. Déclarez une variable entier et attribuez-lui une valeur entière de votre choix.
+2. Déclarez une variable decimal et attribuez-lui une valeur décimale (nombre à
+virgule) de votre choix.
+3. Déclarez une variable texte et attribuez-lui une chaîne de caractères (texte) de
+votre choix.
+4. Déclarez une variable vrai_ou_faux et attribuez-lui une valeur booléenne (True
+ou False) en fonction d'une affirmation de votre choix.
+5. Affichez le type de chaque variable en utilisant la fonction type().
+6. Effectuez une opération mathématique en utilisant la variable entier et la variable
+decimal, puis affichez le résultat.
+7. Concaténez la variable texte avec une autre chaîne de caractères de votre choix,
+puis affichez le résultat.
+8. Inversez la valeur de la variable vrai_ou_faux (si elle est True, elle devient
+False, et vice versa) et affichez la nouvelle valeur.
+"""
+
+# déclaration de la variables
+entier = 42
+decimal = 3.14
+texte = "Bonjour, "
+vrai_ou_faux = True
+
+# Affichage des types
+print("Type entier :", type(entier))
+print("Type décimal :", type(decimal))
+print("Type texte :", type(texte))
+print("Type vrai_ou_faux :",type(vrai_ou_faux))
+
+# Opération mathématique
+resultat_operation = entier + decimal
+print("Résultat de l'opération mathématique :", resultat_operation)
+# concaténation de chaines de caractères
+nouveau_texte = texte + "Comment ça va ?"
+print("Nouvelle chaine de caractères :", nouveau_texte)
+
+# Inversion de la valeur booléenne
+vrai_ou_faux = not vrai_ou_faux
+print("Nouvelle valeur de vrai ou de faux:", vrai_ou_faux)
