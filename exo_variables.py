@@ -302,4 +302,22 @@ print("Le plus grand diviseur de", nombre, "est : ", plus_grand_diviseur)
 
 # Exercice final sur les variables : Calcul de la moyenne
 
-# 
+# Déclaration des notes
+note_maths = 15
+note_physique = 18
+note_anglais = 16
+
+# Calcul la moyenne initiale
+moyenne = (note_maths + note_anglais + note_physique) / 3
+
+# Affichage de la moyenne initiale
+print("La moyenne des notes est : ", moyenne)
+
+# Mise à jour de la note de mathématique
+note_maths += 2
+
+# Recalcul de la moyenne avec la nouvelle note de maths
+moyenne = (note_maths + note_anglais + note_anglais) / 3
+
+# Affichage de la nouvelle moyenne
+print("Après la mise à jour, la nouvelle moyenne des notes est : ", moyenne)
