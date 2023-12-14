@@ -268,3 +268,38 @@ for facteur in facteurs:
     
 # Affiche le nombre de diviseurs
 print("LE nombre de diviseurs de", nombre, "est : ", nb_diviseurs)
+
+
+# Exercice 10 :
+
+# Demande à l'utilisateur de saisir un nombre
+nombre = int(input("Saisissez le nombre : "))
+
+# Initialise le plus grand diviseur
+plus_grand_diviseur = 1
+
+# Itère sur les nombres de 1 à nombre
+for i in range(1, nombre + 1):
+    # Vérifie si i est un diviseur de nombre
+    if nombre % i == 0:
+        # Met à jour le plus grand diviseur
+        if i > plus_grand_diviseur:
+            plus_grand_diviseur = i
+            
+# Affiche le plus grand diviseur
+print("Le plus grand diviseur de", nombre, "est : ", plus_grand_diviseur)
+
+# Autre solution
+
+# Demande à l'utilisateur de saisir un nombre
+nombre = int(input("Saisissez le nombre : "))
+
+# Récupère le plus grand diviseur
+plus_grand_diviseur = math.gcd(nombre, nombre)
+
+# Affiche le plus grand diviseur
+print("Le plus grand diviseur de", nombre, "est : ", plus_grand_diviseur)
+
+# Exercice final sur les variables : Calcul de la moyenne
+
+# 
