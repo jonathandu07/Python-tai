@@ -192,4 +192,42 @@ else:
 # Affiche le type du nombre
 print("Le nombre est {}.".format(type_nombre))
 
+# Exercice 7:
 
+# Définition des deux premier nombres de la séquence de Fibonacci
+a = 0
+b = 1
+
+# Demande à l'utilisateur de saisir un nombre
+n = int(input("Saisissez un nombre : "))
+
+# Calcul dunombre suivant dans la séquence
+# La boucle for itère de 0 à n-1 pour calculer le nombre suivant dans la séquence
+for i in range(n - 1):
+    # La valeur de a devient la valeur de b, et la valeur de b devient la somme des anciennes valeurs de a et de b
+    a, b = b, a + b
+    
+# Affichage du nombre suivant
+print("Le nombre suivant dans la séquence de Fibonacci est :", b)
+
+
+# Exercice 8:
+
+# Demande à l'utilisateur de saisir un nombre
+nombre = int(input("Saisissez le nombre : "))
+
+# Affiche la table de multiplication
+for i in range(1, 11):
+    print(nombre, "X", i, "=", nombre *1)
+    
+# Une autre solution
+
+# Demande à l'utilisateur de saisir un nombre
+nombre = int(input("Saisissez le nombre : "))
+
+i = 1
+
+# Affiche la table de multiplication
+while i <= 10:
+    print(nombre, "X", i, "=", nombre * i)
+    
