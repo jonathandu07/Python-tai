@@ -115,7 +115,7 @@ print(nombre_inverse)
 # Autre solution (beaucoup plus simple)
 
 # On demande le nombre à l'utilisateur
-nombre = int(input("Saissez le nombre : "))
+nombre = int(input("Saisissez le nombre : "))
 
 # Inversion du nombre
 nombre_inverse = 0 #Initialisation du nombre inversé à zero
@@ -129,7 +129,7 @@ print(nombre_inverse)
 # Exercice 5:
 
 # Demande à l'utilisateur de saisir un nombre
-nombre = int(input("Saissez le nombre : "))
+nombre = int(input("Saisissez le nombre : "))
 
 # Determine le type du nombre !
 if nombre > 0: # Si le nombre est positif
@@ -145,7 +145,7 @@ print("Le nombre est {}".format(type_nombre))
 # autre solution plus simple 
 
 # Demande à l'utilisateur de saisir un nombre
-nombre = int(input("Saissez le nombre : "))
+nombre = int(input("Saisissez le nombre : "))
 
 if abs(nombre) > 0: #Si la valeur absolue du nombre est supérieur à 0
     type_nombre = "Positif" if nombre > 0 else "Négatif" # Utilisation d'une expression conditionnelle pour déterminer le type
@@ -155,3 +155,41 @@ else:
 
 # Affiche le type du nombre
 print("Le nombre est {}".format(type_nombre))
+
+# Exercice 6:
+
+# Demande à l'utilisateur de saisir un nombre
+nombre = int(input("Saisissez le nombre : "))
+
+# Détermine le type du nombre
+# Vérifie si le reste de la division du nombre par 2 est égal à 0
+# Si c'est le cas, le nombre est pair, sinon il est impair
+if nombre % 2 == 0:
+    type_nombre = "pair"
+else:
+    type_nombre = "impair"
+    
+# Affiche le type du nombre
+print("Le nombre est {}".format(type_nombre))
+
+# Méthode plus simple ou seconde solution ou otra solucion, other solution
+
+# Demande à l'utilisateur de saisir un nombre
+nombre = int(input("Saisissez le nombre : "))
+
+# Déternime le type du nombre
+# Utilise la fonction divmod qui renvoie à la fois le quotient et le reste de la division de nombre par 2
+
+quotient, reste = divmod(nombre, 2)
+
+# Vérifie si le reste de la division par 2 est égal à zéro
+# SI c'est le cas, le nombre est pair, sinon il est impair
+if reste == 0:
+    type_nombre = "pair"
+else:
+    type_nombre = "impair"
+    
+# Affiche le type du nombre
+print("Le nombre est {}.".format(type_nombre))
+
+
