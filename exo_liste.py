@@ -46,3 +46,21 @@ print("---------------------------")
 # ******************************** 
 
 # Exercice 3:
+
+# Demande à l'utilisateur de saisir une liste de nombres
+liste_nombres = input("Saisissez une liste de nombres : ")
+
+# Convertit la liste de chaines de caractères en liste de nombres
+liste_nombres = [int(nombre) for nombre in liste_nombres.split()]
+
+# Tri la liste par ordre croissant
+liste_nombres.sort()
+
+# affichage de la liste triée par ordre croissant
+print("La liste triée par ordre croissant est : ", liste_nombres)
+
+    
+# ******************************** 
+print("---------------------------")   
+# ******************************** 
+
