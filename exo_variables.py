@@ -231,3 +231,40 @@ i = 1
 while i <= 10:
     print(nombre, "X", i, "=", nombre * i)
     
+# Exercice 9
+
+# Demande à l'utilisateur de saisir un nombre
+nombre = int(input("Saisissez le nombre : "))
+
+# Initialise le nombre de diviseurs
+nb_diviseurs = 0
+
+# Itère sur les nombres de 1 jusqu'à nombre
+for i in range(1, nombre + 1):
+    # Vérifie si i est un diviseur de nombre
+    if nombre % i == 0:
+        # Increment le nombre de diviseursd
+        nb_diviseurs += 1
+        
+# Affiche le nombre de diviseurs
+print("LE nombre de diviseurs de", nombre, "est : ", nb_diviseurs)
+
+
+# Autre solution
+import math
+
+# Demande à l'utilisateur de saisir un nombre
+nombre = int(input("Saisissez le nombre : "))
+
+# Initialise le nombre de diviseurs
+nb_diviseurs = 0
+
+# Récupère les facteurs du nombre
+facteurs = math.factor(nombre)
+
+# compte le nombre de facteurs
+for facteur in facteurs:
+    nb_diviseurs += 1
+    
+# Affiche le nombre de diviseurs
+print("LE nombre de diviseurs de", nombre, "est : ", nb_diviseurs)
