@@ -1,82 +1,68 @@
-from tkinter import *
-import sqlite3
-from tkinter import ttk
-from turtle import width
-
-def validate():
-    # get form data
-    name = entryName.get()
-    email = entryEmail.get()
-    age = entryAge.get()
-    
-    conn = sqlite3.connect("mydatabase.db")
-    cur = conn.cursor()
-
-    req  = "CREATE TABLE IF NOT EXISTS students ( id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, email TEXT NOT NULL, age INTEGER NOT NULL)"
-    cur.execute(req)
-    
-    rqt = "INSERT INTO students (name, email, age) VALUES (?, ?, ?)"
-    cur.execute(rqt, (name, email, age))
-    conn.commit()
-    conn.close()
-    
-    
-root = Tk()
-root.geometry("600x400")
-
-#==============================
-# create a form to insert date
-#==============================
-# Lbael & Entry for name
-
-lblName = Label(root, text="Name : ")
-lblName.place(x=10, y = 10)
-entryName = Entry(root)
-entryName.place(x=100, y = 10, width=200)
-
-# Lbael & Entry for email
-
-lblEmail = Label(root, text="E mail : ")
-lblEmail.place(x=350, y = 10)
-entryEmail = Entry(root)
-entryEmail.place(x=390, y = 10, width=200)
-
-# Lbael & Entry for age
-
-lblAge = Label(root, text="Age : ")
-lblAge.place(x=10, y = 40)
-entryAge = Entry(root)
-entryAge.place(x=100, y = 40, width=100)
-
-# validate button
-btnValide = Button(root, text="valider", command = validate)
-btnValide.place(x =350, y = 40, width=200, height=25)
-
-#==============================
-# display data
-#==============================
-
-tree = ttk.Treeview(root, columns =(1,2,3,4), height =5, show="headings")
-tree.place(x= 25, y = 170, width=550, height=175)
-
-tree.heading(1 , text = "ID")
-tree.heading(2 , text = "Name")
-tree.heading(3 , text = "Email")
-tree.heading(4 , text = "Age")
-
-tree.column(1, width =50)
-tree.column(2 ,width =100)
-tree.column(3 ,width =100)
-tree.column(3 ,width =50)
+import tkinter as tk
 
 
-conn = sqlite3.connect("mydatabase.db")
-cur = conn.cursor()
-req  = "CREATE TABLE IF NOT EXISTS students ( id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, email TEXT NOT NULL, age INTEGER NOT NULL)"
-cur.execute(req)
-select  = cur.execute("SELECT * FROM students")
-for row in select:
-    tree.insert('', END, values = row)
-# cur.execute(select)
 
-root.mainloop()
+print("Voici une calculatrice avec une interface graphique!")
+
+window = tk.Tk()
+
+e1 = tk.Entry(window)
+e2 = tk.Entry(window)
+b = tk.Button(window, text="Calculer")
+e3 = tk.Message(window)
+e4 = tk.Button(window,text="+")
+e5 = tk.Button(window,text="-")
+e6 = tk.Button(window,text="X")
+e7 = tk.Button(window,text="/")
+
+add = False
+sous = True
+prod = True
+div = True
+
+e1.grid(row=0, column=0)
+e2.grid(row=1, column=0)
+b.grid(row=2, column=0)
+e3.grid(row=3, column=0)
+e4.grid(row=0, column=10)
+e5.grid(row=1, column=10)
+e6.grid(row=2, column=10)
+e7.grid(row=3, column=10)
+
+def calculer():
+    a = int(e1.get())
+    b = int(e2.get())
+    c = e4["text"]
+    d = e5["text"]
+    e = e6["text"]
+
+    if c == "+":
+        result = a + b
+    if d == "-" :
+        result = a - b
+    if e == "X" :
+        result = a * b
+    else:
+        result = a / b
+
+    e3.config(text=int(result))
+    print(result)
+
+def addition():
+    add = False
+    sous = False
+    prod = False
+    div = False
+    return (add, sous, prod, div)
+
+def soustraction():
+    add = False
+    sous = True
+    prod = False
+    div = False
+    return (add, sous, prod, div)
+
+b.config(command=calculer)
+
+
+window.mainloop()
