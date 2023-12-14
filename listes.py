@@ -94,4 +94,8 @@ for i in y:
 print("---------------------------")   
 # ******************************** 
 
-# Trie
+# Tri des éléments d'une liste
+# La méthode (la fonction) sort() trie les éléments de la liste. Pour les listes de chaînes de caractères, le trie est alphabétique, et pour les nombres, le tri est numérique.
+
+reseaux_sociaux.sort()
+print(reseaux_sociaux)
