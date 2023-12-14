@@ -36,3 +36,23 @@ print("Le produit des deux nombres est : ",produit)
 print("Le quotient des deux nombres est : ",quotient)
 
 # Exercice 3:
+
+# Dictionnaire contenant les noms des nombres en lettres
+dict_nombres = {
+    1:"un",
+    2:"deux",
+    3:"trois",
+    4:"quatre",
+    5:"cinq",
+    6:"six",
+    7:"sept",
+    8:"huit",
+    9:"neuf",
+    10:"dix",
+}
+
+# demande à l'utilisateur de rentrer un nombre
+nombre = int(input("Saisissez un nombre : "))
+
+# afficher le nombre en lettres
+print(dict_nombres[nombre])
